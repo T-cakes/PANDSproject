@@ -18,26 +18,27 @@ f.close()
 grouped = data.groupby('Name')
 colors = {'Iris-setosa':'red', 'Iris-versicolor':'orange', 'Iris-virginica':'purple'}
 
+#Function for plotting all histograms
 def plothist(dim):
+    #allows Plotting of each Flower type seperately in same graph
     fig, ax = plt.subplots()
     for key, group in grouped:
-        #https://www.dataindependent.com/pandas/pandas-histogram/
+        #Plotting Histograms: https://www.dataindependent.com/pandas/pandas-histogram/
         group[dim].plot(ax=ax, kind='hist', alpha = 0.4, title = dim, bins = 10, grid=True,  color = colors[key])
     plt.legend(['Iris-setosa', 'iris-versicolor', 'iris-virginica'])
     plt.xlabel( dim + ' in cm')
     plt.ylabel('Amount')
     plt.savefig('histogram/'+ dim + '.png')
     plt.show()
-    plt.close()
 
+#Function for plotting all scatter plots
 def scatplot(mes):
-    #https://kanoki.org/2020/08/30/matplotlib-scatter-plot-color-by-category-in-python/
+    #Plotting Scatter Plots: https://kanoki.org/2020/08/30/matplotlib-scatter-plot-color-by-category-in-python/
     fig, ax = plt.subplots()
     for key, group in grouped:
         group.plot(ax=ax,kind='scatter', x = mes + ' Length', y = mes + ' Width', grid = True, label=key, color = colors[key])
     plt.savefig('ScatterPlots/'+ mes +' Scatter.png')
     plt.show()
-    plt.close()
 
 plothist('Sepal Length')
 plothist('Sepal Width')
