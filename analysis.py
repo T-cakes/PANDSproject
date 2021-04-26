@@ -33,17 +33,26 @@ def plothist(dim):
     plt.show()
 
 #Function for plotting all scatter plots
-def scatplot(mes):
+def scatplot(mes1, mes2):
     #Plotting Scatter Plots: https://kanoki.org/2020/08/30/matplotlib-scatter-plot-color-by-category-in-python/
     fig, ax = plt.subplots()
     for key, group in grouped:
-        group.plot(ax=ax,kind='scatter', x = mes + ' Length', y = mes + ' Width', grid = True, label=key, color = colors[key])
-    plt.savefig('ScatterPlots/'+ mes +' Scatter.png')
+        group.plot(ax=ax,kind='scatter', x = mes1, y = mes2, grid = True, label=key, color = colors[key])
+    plt.savefig('ScatterPlots/'+ mes1 + "-" + mes2 + ' Scatter.png')
     plt.show()
+
 
 plothist('Sepal Length')
 plothist('Sepal Width')
 plothist('Petal Length')
 plothist('Petal Width')
-scatplot('Sepal')
-scatplot('Petal')
+scatplot('Sepal Length','Sepal Width')
+scatplot('Sepal Length','Petal Length')
+scatplot('Sepal Length','Petal Width')
+scatplot('Petal Length','Sepal Width')
+scatplot('Petal Length','Petal Width')
+scatplot('Sepal Width','Petal Width')
+
+#Produces a pair plot of Histograms and scatterplot using seaborn
+pp = sb.pairplot(data, hue = 'Name', diag_kind="hist")
+pp.savefig("pairplot.png")
