@@ -15,6 +15,7 @@ f = open('output.txt', 'w')
 f.write(str(data.groupby(['Name']).describe()))
 f.close()
 
+#Allows each flower on graphs to be colour coded
 grouped = data.groupby('Name')
 colors = {'Iris-setosa':'red', 'Iris-versicolor':'orange', 'Iris-virginica':'purple'}
 
