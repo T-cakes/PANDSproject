@@ -15,7 +15,7 @@ In this article, he developed a linear function to differentiate various Iris sp
 
 -----
 
-![alt text]('ScatterPlots/Petal Scatter.png')
+![alt text](https://github.com/T-cakes/PANDSproject/blob/main/ScatterPlots/Petal%20Scatter.png?raw=true)
 
 ---------------------------------------------------------
 
