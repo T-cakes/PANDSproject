@@ -156,6 +156,12 @@ Comparing this with the <b>Iris-Virginica</b> <i>petal lengths</b> we see the di
 
 ### Histogram code
 
+The function I wrote that creates the histogram passes in a string that one of the measurement columns. This then applies that string to all areas that specific data is required of referenced.\
+
+I used matplotlib to create and detail the histograms and it proved to have all the tools need for a satisfactory histogram\
+
+I originally had several different blocks of code to create each histogram, but I realised this was a lot of repetition and that it could be condensed into a singular function with a string argument passed in.
+
 ```python
 #Function for plotting all histograms
 def plothist(column):
@@ -187,6 +193,9 @@ def plothist(column):
 
 ### Scatter Plot Code
 
+The function I wrote for creating scatter plots is similar in nature to my histogram plotting function, with the only difference being I passed in two strings for a pair of data sets to create the scatter plot./
+6 scatter plots are created through this, 1 for each pairing of data sets.
+
 ```python
 #Function for plotting all scatter plots
 def plotscatter(measure1, measure2):
@@ -203,6 +212,8 @@ def plotscatter(measure1, measure2):
 ![alt text](https://github.com/T-cakes/PANDSproject/blob/main/pairplot.png)
 
 ### Pair Plot Code
+
+This plot was created using seaborn, and I mostly wanted to make it to be a more compact set of graphs in one image that allowed overview all possible data set pairings with ease.
 
 ```python
 pp = sb.pairplot(data, hue = 'Name', diag_kind="hist")
