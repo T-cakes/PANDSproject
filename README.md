@@ -160,18 +160,20 @@ Comparing this with the <b>Iris-Virginica</b> <i>petal lengths</b> we see the di
 
 These histograms were created through this function I wrote:
 
-    #Function for plotting all histograms
-    def plothist(column):
-        #allows Plotting of each Flower type seperately in same graph
-        fig, axes = plt.subplots()
-        for key, group in grouped:
-            #Plotting Histograms: https://www.dataindependent.com/pandas/pandas-histogram/
-            group[column].plot(ax=axes, kind='hist', alpha = 0.4, title = column, bins = 10, grid=True,  color = colors[key])
-        plt.legend(['Iris-setosa', 'iris-versicolor', 'iris-virginica'])
-        plt.xlabel( column + ' in cm')
-        plt.ylabel('Amount')
-        plt.savefig('Histogram/'+ column + '.png')
-        plt.show()
+```python
+#Function for plotting all histograms
+def plothist(column):
+    #allows Plotting of each Flower type seperately in same graph
+    fig, axes = plt.subplots()
+    for key, group in grouped:
+        #Plotting Histograms: https://www.dataindependent.com/pandas/pandas-histogram/
+        group[column].plot(ax=axes, kind='hist', alpha = 0.4, title = column, bins = 10, grid=True,  color = colors[key])
+    plt.legend(['Iris-setosa', 'iris-versicolor', 'iris-virginica'])
+    plt.xlabel( column + ' in cm')
+    plt.ylabel('Amount')
+    plt.savefig('Histogram/'+ column + '.png')
+    plt.show()
+```
 
 ## Scatter Plots Analysis
 
@@ -189,24 +191,26 @@ These histograms were created through this function I wrote:
 
 These Scatter Plots were created through this function I wrote:
 
-    #Function for plotting all scatter plots
-    def plotscatter(measure1, measure2):
-        #Plotting Scatter Plots: https://kanoki.org/2020/08/30/matplotlib-scatter-plot-color-by-category-in-python/
-        fig, axes = plt.subplots()
-        for key, group in grouped:
-            group.plot(ax=axes,kind='scatter', x = measure1, y = measure2, grid = True, label=key, color = colors[key])
-        plt.savefig('ScatterPlots/'+ measure1 + "-" + measure2 + ' Scatter.png')
-        plt.show()
-        
+```python
+#Function for plotting all scatter plots
+def plotscatter(measure1, measure2):
+    #Plotting Scatter Plots: https://kanoki.org/2020/08/30/matplotlib-scatter-plot-color-by-category-in-python/
+    fig, axes = plt.subplots()
+    for key, group in grouped:
+        group.plot(ax=axes,kind='scatter', x = measure1, y = measure2, grid = True, label=key, color = colors[key])
+    plt.savefig('ScatterPlots/'+ measure1 + "-" + measure2 + ' Scatter.png')
+    plt.show()
+```
+
 ## Pair Plot
 
 ![alt text](https://github.com/T-cakes/PANDSproject/blob/main/pairplot.png)
 
 This pairplot was created using seaborn in the piece of code:
-
-    pp = sb.pairplot(data, hue = 'Name', diag_kind="hist")
-    pp.savefig("pairplot.png")
-
+```python
+pp = sb.pairplot(data, hue = 'Name', diag_kind="hist")
+pp.savefig("pairplot.png")
+```
 # REFERENCES
 
 [1] The Iris Dataset — A Little Bit of History and Biology - https://towardsdatascience.com/the-iris-dataset-a-little-bit-of-history-and-biology-fb4812f5a7b5
