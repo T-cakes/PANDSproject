@@ -21,7 +21,7 @@ In this article, he developed a linear function to differentiate various Iris sp
 
 # Detailing the Data Set
 
-The data set that I used comes from the <i>University of California Irvine(UCI) Machine Learning Respository</i>[3](#references)
+The data set that I used comes from the <i>University of California Irvine(UCI) Machine Learning Respository</i>[[3]](#references)
 
 The data file itself did not detail the column names so I named them according to the websites detail as follows:
 
