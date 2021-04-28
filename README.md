@@ -4,16 +4,19 @@
 
 # Stephen Caulfield
 ---------------------------------------------------------
+# Table of Contents
 
-# Analysis of FIshers Iris Data using Python
-
+    1. [History of Fishers Iris Data Set](#History of Fishers Iris Data Set
+    2.[Detailing the Data Set](#Detailing the Data Set)
+    3.[#Analysis of Fishers Iris Data Set Using Python](Analysis of Fishers Iris Data Set Using Python)
+)
 ---------------------------------------------------------
 
 # History of Fishers Iris Data Set
 
-The Fisher's Iris Data set was first founded by the British Statitician, geneticist and academic: Ronald Aylmer Fisher.[1]
+<i>The Fisher's Iris Data set</i> was first founded by the British Statitician, geneticist and academic: <i>Ronald Aylmer Fisher</i>.[[1]](#references)
 
-In 1936 he wrote an article titled <i>The Use of Multiple Measurements in Taxonomic Problems</i> in a journal called <i>Annals of Eugenics</i>.[2]
+In 1936 he wrote an article titled <i>The Use of Multiple Measurements in Taxonomic Problems</i> in a journal called <i>Annals of Eugenics</i>.[[2]](#references)
 
 In this article, he developed a linear function to differentiate various Iris species based on their Petal and Sepal lengths and widths. Those Iris species involve: Iris-Setosa, Iris-Versicolor and Iris-Virginica.
 
@@ -23,7 +26,7 @@ In this article, he developed a linear function to differentiate various Iris sp
 
 The data set that I used comes from the <i>University of California Irvine(UCI) Machine Learning Respository</i>[[3]](#references)
 
-The data file itself did not detail the column names so I named them according to the websites detail as follows:
+The data file itself did not detail the column names so I named them according to the websites[[3]](#references) detail as follows:
 
     1. Sepal Length
     2. Sepal Width
@@ -31,13 +34,34 @@ The data file itself did not detail the column names so I named them according t
     4. Petal Width
     5. Name
 
+The data set contains 3 classes detailed by name with 50 instances each with those classes being[[3]](#references):
+
+    1. Iris-Setosa
+    2. Iris-Versicolor
+    3. Iris-Virginica
+
+# Analysis of Fishers Iris Data Set Using Python
+The data analysis I have performed through python provides various statistical observations which are split up by the first four columns and then further split up by the classes.
+
+The analysis provides the count of each data set
+
+the mean of those specific values (e.g. Mean of Sepal Length of all Iris-Setosa etc.).
+
+The Standard Deviation of data.
+
+And the range of the data in 25% intervals.
+
+
+
+
+
 
 ---------------------------------------------------------
 
 # REFERENCES
 
-[1]The Iris Dataset — A Little Bit of History and Biology - https://towardsdatascience.com/the-iris-dataset-a-little-bit-of-history-and-biology-fb4812f5a7b5
+[1] The Iris Dataset — A Little Bit of History and Biology - https://towardsdatascience.com/the-iris-dataset-a-little-bit-of-history-and-biology-fb4812f5a7b5
 
-[2]Annals of Human Genetics - https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1936.tb02137.x
+[2] Annals of Human Genetics - https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1936.tb02137.x
 
 [3] UCI Machine Learning Respository - https://archive.ics.uci.edu/ml/datasets/iris
