@@ -18,7 +18,7 @@ In this article, he developed a linear function to differentiate various Iris sp
 The data set that I used comes from the University of California Irvine(UCI) Machine Learning Respository[3]
 The data file itself did not detail the column names so  I named them as follows:
 
-1. Sepal Length
+    1. Sepal Length
     2. Sepal Width
     3. Petal Length
     4. Petal Width
