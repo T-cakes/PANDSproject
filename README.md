@@ -16,7 +16,17 @@
 
     ii. [Mean](#mean)
 
-4. [Histogram Analysis](#histogram-analysis)
+    iii. [Standard Deviation](#standard-deviation)
+
+    iv. [Range](#range)
+
+4. [Plots](#plots)
+
+    i. [Histogram Analysis](#histogram-analysis)
+
+    ii. [Scatter Plots](#scatter-plots)
+
+    iii. [Pair Plot](#pair-plots)
 
 5. [References](#references)
 ---------------------------------------------------------
@@ -94,10 +104,15 @@ Following up with the <i>petal length's</i> again, with the <b>Iris-Setosa</b> w
 But also considering that the 50% and 75% intervals are the most closely equivalent to eachother shows that general number range is the most representative of this particular data set.
 
 Comparing this with the <b>Iris-Virginica</b> <i>petal lengths</b> we see the distances for the first 4 intervals range from 0.325 to 0.6 which is somewhat unnotable, but with the 75% to max interval, there is a difference of 1.025 which tells us that there is either some extreme outliers on the higher end or that the <b>Iris-Virginica's</b> <i>petal length's</i> have an exponential growth past a certain point.
+
 ---------------------------------------------------------
+# Plots
 
-# Histogram Analysis
+## Histogram Analysis
 
+## Scatter Plots
+
+## Pair Plot
 
 # REFERENCES
 
