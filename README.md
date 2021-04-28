@@ -6,9 +6,9 @@
 ---------------------------------------------------------
 # Table of Contents
 
-    1. [History of Fishers Iris Data Set](#History of Fishers Iris Data Set)
-    2.[Detailing the Data Set](#Detailing the Data Set)
-    3.[#Analysis of Fishers Iris Data Set Using Python](Analysis of Fishers Iris Data Set Using Python)
+    1. [History of Fishers Iris Data Set](#history-of-fishers-iris-data-set)
+    2.[Detailing the Data Set](#detailing-the-data-set)
+    3.[#Analysis of Fishers Iris Data Set Using Python](Analysis-of-Fishers-Iris-Data-Set-Using-Python)
 )
 ---------------------------------------------------------
 
