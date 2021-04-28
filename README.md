@@ -9,18 +9,18 @@
 
 2. [Detailing the Data Set](#detailing-the-data-set)
 
-3. [Analysis of Fishers Iris Data Set Using Python](#analysis-of-fishers-iris-data-set-using-python)\
-    - [Table Overview](#table-overview)\
-    - [Mean](#mean)\
-    - [Standard Deviation](#standard-deviation)\
+3. [Analysis of Fishers Iris Data Set Using Python](#analysis-of-fishers-iris-data-set-using-python)
+    - [Table Overview](#table-overview)
+    - [Mean](#mean)
+    - [Standard Deviation](#standard-deviation)
     - [Range](#range)
 
-4. [Plots](#plots)\
-    - [Histogram Analysis](#histogram-analysis)\
-        - [Histogram Code](#histogram-code)\
-    - [Scatter Plots](#scatter-plots)\
-        - [Scatter Plot Code](#scatter-plot-code)\
-    - [Pair Plot](#pair-plot)\
+4. [Plots](#plots)
+    - [Histogram Analysis](#histogram-analysis)
+        - [Histogram Code](#histogram-code)
+    - [Scatter Plots](#scatter-plots)
+        - [Scatter Plot Code](#scatter-plot-code)
+    - [Pair Plot](#pair-plot)
         - [Pair Plot Code](#pair-plot-code)
 
 
