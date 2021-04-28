@@ -110,9 +110,31 @@ Comparing this with the <b>Iris-Virginica</b> <i>petal lengths</b> we see the di
 
 ## Histogram Analysis
 
+![alt text](https://github.com/T-cakes/PANDSproject/blob/main/histogram/Sepal%20Length.png)
+
+![alt text](https://github.com/T-cakes/PANDSproject/blob/main/histogram/Sepal%20Width.png)
+
+![alt text](https://github.com/T-cakes/PANDSproject/blob/main/histogram/Petal%20Length.png)
+
+![alt text](https://github.com/T-cakes/PANDSproject/blob/main/histogram/Petal%20Width.png)
+
 ## Scatter Plots
 
+![alt text](https://github.com/T-cakes/PANDSproject/blob/main/ScatterPlots/Petal%20Length-Petal%20Width%20Scatter.png)
+
+![alt text](https://github.com/T-cakes/PANDSproject/blob/main/ScatterPlots/Petal%20Length-Sepal%20Width%20Scatter.png)
+
+![alt text](https://github.com/T-cakes/PANDSproject/blob/main/ScatterPlots/Sepal%20Length-Petal%20Length%20Scatter.png)
+
+![alt text](https://github.com/T-cakes/PANDSproject/blob/main/ScatterPlots/Sepal%20Length-Petal%20Width%20Scatter.png)
+
+![alt text](https://github.com/T-cakes/PANDSproject/blob/main/ScatterPlots/Sepal%20Length-Sepal%20Width%20Scatter.png)
+
+![alt text](https://github.com/T-cakes/PANDSproject/blob/main/ScatterPlots/Sepal%20Width-Petal%20Width%20Scatter.png)
+
 ## Pair Plot
+
+![alt text](https://github.com/T-cakes/PANDSproject/blob/main/pairplot.png)
 
 # REFERENCES
 
