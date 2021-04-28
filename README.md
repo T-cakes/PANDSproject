@@ -23,12 +23,13 @@
     - [Pair Plot](#pair-plot)
         - [Pair Plot Code](#pair-plot-code)
 
+5. [Technologies Used](#technologies-used)
 
 5. [References](#references)
 
-Markup : <details>
-<summary># History of Fishers Iris Data Set</summary>
-<p>
+
+# History of Fishers Iris Data Set
+
 <i>The Fisher's Iris Data set</i> was first founded by the British Statitician, geneticist and academic: <i>Ronald Aylmer Fisher</i>.[[1]](#references)
 
 In 1936 he wrote an article titled <i>The Use of Multiple Measurements in Taxonomic Problems</i> in a journal called <i>Annals of Eugenics</i>.[[2]](#references)
@@ -37,8 +38,7 @@ In this article, he developed a linear function to differentiate various Iris sp
 
 ![alt text](https://camo.githubusercontent.com/74e378bb24b34efb63e8db09c4f073370d36f23aaa2c7580a805e93c881b78c2/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6173736574732e6461746163616d702e636f6d2f626c6f675f6173736574732f4d616368696e652b4c6561726e696e672b522f697269732d6d616368696e656c6561726e696e672e706e67)
 
-</p>
-</details>
+
 # Detailing the Data Set
 
 The data set that I used comes from the <i>University of California Irvine(UCI) Machine Learning Respository</i>[[3]](#references)
@@ -144,6 +144,7 @@ But also considering that the 50% and 75% intervals are the most closely equival
 
 Comparing this with the <b>Iris-Virginica</b> <i>petal lengths</b> we see the distances for the first 4 intervals range from 0.325 to 0.6 which is somewhat unnotable, but with the 75% to max interval, there is a difference of 1.025 which tells us that there is either some extreme outliers on the higher end or that the <b>Iris-Virginica's</b> <i>petal length's</i> have an exponential growth past a certain point.
 
+
 # Plots
 
 ## Histogram Analysis
@@ -219,6 +220,8 @@ def plotscatter(measure1, measure2):
 
 This plot was created using seaborn, and I mostly wanted to make it to be a more compact set of graphs in one image that allowed overview all possible data set pairings with ease.
 
+The one issue with these pair plots is that they have repeating graph's that are just inverted in some fashion.
+
 ```python
 pp = sb.pairplot(data, hue = 'Name', diag_kind="hist")
 pp.savefig("pairplot.png")
@@ -230,3 +233,10 @@ pp.savefig("pairplot.png")
 [2] Annals of Human Genetics - https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1936.tb02137.x
 
 [3] UCI Machine Learning Respository - https://archive.ics.uci.edu/ml/datasets/iris
+
+# Technologies Used
+
+- Visual Studio Code - version 1.55.2
+- Anaconda3
+- Python - version 3.8.5 64 bit
+- Google Chrome

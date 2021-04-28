@@ -25,6 +25,7 @@ f = open('output.txt', 'w')
 f.write('Statistical Analysis of Fishers Iris Data Set \n')
 f.write('=============================================== \n')
 f.write(str(data.groupby(['Name']).describe()))
+f.write('\n\nAll measurements are in centimetres(cm)')
 f.close()
 
 #Allows each flower on graphs to be colour coded
