@@ -26,8 +26,9 @@
 
 5. [References](#references)
 
-# History of Fishers Iris Data Set
-
+Markup : <details>
+<summary># History of Fishers Iris Data Set</summary>
+<p>
 <i>The Fisher's Iris Data set</i> was first founded by the British Statitician, geneticist and academic: <i>Ronald Aylmer Fisher</i>.[[1]](#references)
 
 In 1936 he wrote an article titled <i>The Use of Multiple Measurements in Taxonomic Problems</i> in a journal called <i>Annals of Eugenics</i>.[[2]](#references)
@@ -36,6 +37,8 @@ In this article, he developed a linear function to differentiate various Iris sp
 
 ![alt text](https://camo.githubusercontent.com/74e378bb24b34efb63e8db09c4f073370d36f23aaa2c7580a805e93c881b78c2/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6173736574732e6461746163616d702e636f6d2f626c6f675f6173736574732f4d616368696e652b4c6561726e696e672b522f697269732d6d616368696e656c6561726e696e672e706e67)
 
+</p>
+</details>
 # Detailing the Data Set
 
 The data set that I used comes from the <i>University of California Irvine(UCI) Machine Learning Respository</i>[[3]](#references)
@@ -193,7 +196,8 @@ def plothist(column):
 
 ### Scatter Plot Code
 
-The function I wrote for creating scatter plots is similar in nature to my histogram plotting function, with the only difference being I passed in two strings for a pair of data sets to create the scatter plot./
+The function I wrote for creating scatter plots is similar in nature to my histogram plotting function, with the only difference being I passed in two strings for a pair of data sets to create the scatter plot.
+
 6 scatter plots are created through this, 1 for each pairing of data sets.
 
 ```python
