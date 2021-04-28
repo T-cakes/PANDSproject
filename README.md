@@ -15,13 +15,13 @@
     i. [Table Overview](#table-overview)\
     ii. [Mean](#mean)\
     iii. [Standard Deviation](#standard-deviation)\
-    iv. [Range](#range)\
+    iv. [Range](#range)
 
 4. [Plots](#plots)
 
-    i. [Histogram Analysis](#histogram-analysis)\n
-    ii. [Scatter Plots](#scatter-plots)\n
-    iii. [Pair Plot](#pair-plot)\n
+    i. [Histogram Analysis](#histogram-analysis)\
+    ii. [Scatter Plots](#scatter-plots)\
+    iii. [Pair Plot](#pair-plot)
 
 5. [References](#references)
 ---------------------------------------------------------
