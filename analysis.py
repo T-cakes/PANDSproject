@@ -41,7 +41,7 @@ def plothist(column):
     plt.legend(['Iris-setosa', 'iris-versicolor', 'iris-virginica'])
     plt.xlabel( column + ' in cm')
     plt.ylabel('Amount')
-    plt.savefig('histogram/'+ column + '.png')
+    plt.savefig('Histogram/'+ column + '.png')
     plt.show()
 
 #Function for plotting all scatter plots

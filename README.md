@@ -26,7 +26,7 @@
 
     ii. [Scatter Plots](#scatter-plots)
 
-    iii. [Pair Plot](#pair-plots)
+    iii. [Pair Plot](#pair-plot)
 
 5. [References](#references)
 ---------------------------------------------------------
