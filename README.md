@@ -10,15 +10,13 @@
 
 2. [Detailing the Data Set](#detailing-the-data-set)
 
-3. [Analysis of Fishers Iris Data Set Using Python](#analysis-of-fishers-iris-data-set-using-python)
-
+3. [Analysis of Fishers Iris Data Set Using Python](#analysis-of-fishers-iris-data-set-using-python)\
     i. [Table Overview](#table-overview)\
     ii. [Mean](#mean)\
     iii. [Standard Deviation](#standard-deviation)\
     iv. [Range](#range)
 
-4. [Plots](#plots)
-
+4. [Plots](#plots)\
     i. [Histogram Analysis](#histogram-analysis)\
     ii. [Scatter Plots](#scatter-plots)\
     iii. [Pair Plot](#pair-plot)
