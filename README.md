@@ -12,11 +12,10 @@
 
 3. [Analysis of Fishers Iris Data Set Using Python](#analysis-of-fishers-iris-data-set-using-python)
 
-    i. [Table Overview](#table-overview)
-
-    ii. [Mean](#mean)\n
-    iii. [Standard Deviation](#standard-deviation)\n
-    iv. [Range](#range)\n
+    <br>i. [Table Overview](#table-overview)</br>
+    <br>ii. [Mean](#mean)</br>
+    <br>iii. [Standard Deviation](#standard-deviation)</br>
+    <br>iv. [Range](#range)</br>
 
 4. [Plots](#plots)
 
