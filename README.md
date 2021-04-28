@@ -13,7 +13,7 @@
 
 The Fisher's Iris Data set was first founded by the British Statitician, geneticist and academic: Ronald Aylmer Fisher.[1]
 
-In 1936 he wrote an article titled "The Use of Multiple Measurements in Taxonomic Problems" in a journal called "Annals of Eugenics.[2]
+In 1936 he wrote an article titled <i>The Use of Multiple Measurements in Taxonomic Problems</i> in a journal called <i>Annals of Eugenics</i>.[2]
 
 In this article, he developed a linear function to differentiate various Iris species based on their Petal and Sepal lengths and widths. Those Iris species involve: Iris-Setosa, Iris-Versicolor and Iris-Virginica.
 
@@ -21,7 +21,7 @@ In this article, he developed a linear function to differentiate various Iris sp
 
 # Detailing the Data Set
 
-The data set that I used comes from the <i>University of California Irvine(UCI) Machine Learning Respository</i>[3]
+The data set that I used comes from the <i>University of California Irvine(UCI) Machine Learning Respository</i>[3](#references)
 
 The data file itself did not detail the column names so I named them according to the websites detail as follows:
 
