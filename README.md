@@ -54,7 +54,7 @@ The Standard Deviation of data.
 
 And the range of the data in 25% intervals.
 
-![alt text](https://camo.githubusercontent.com/74e378bb24b34efb63e8db09c4f073370d36f23aaa2c7580a805e93c881b78c2/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6173736574732e6461746163616d702e636f6d2f626c6f675f6173736574732f4d616368696e652b4c6561726e696e672b522f697269732d6d616368696e656c6561726e696e672e706e67)
+![alt text](https://github.com/T-cakes/PANDSproject/blob/main/output.png)
 
 
 
