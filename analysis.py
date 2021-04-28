@@ -1,3 +1,12 @@
+# analysis.py
+
+# Author: Stephen Caulfield
+
+# This Program reads in the Fishers Iris Data Set(Iris.data) and 
+# outputs various analyses on on the data set along with Histograms
+# and Scatter Plots detailing the data.
+
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -13,6 +22,8 @@ data.columns = dataList
 
 #Writes to output.txt, a summary of each variables split into each flower category.
 f = open('output.txt', 'w')
+f.write('Statistical Analysis of Fishers Iris Data Set \n')
+f.write('=============================================== \n')
 f.write(str(data.groupby(['Name']).describe()))
 f.close()
 
@@ -23,10 +34,10 @@ colors = {'Iris-setosa':'red', 'Iris-versicolor':'orange', 'Iris-virginica':'pur
 #Function for plotting all histograms
 def plothist(column):
     #allows Plotting of each Flower type seperately in same graph
-    fig, ax = plt.subplots()
+    fig, axes = plt.subplots()
     for key, group in grouped:
         #Plotting Histograms: https://www.dataindependent.com/pandas/pandas-histogram/
-        group[column].plot(ax=ax, kind='hist', alpha = 0.4, title = column, bins = 10, grid=True,  color = colors[key])
+        group[column].plot(ax=axes, kind='hist', alpha = 0.4, title = column, bins = 10, grid=True,  color = colors[key])
     plt.legend(['Iris-setosa', 'iris-versicolor', 'iris-virginica'])
     plt.xlabel( column + ' in cm')
     plt.ylabel('Amount')
@@ -36,13 +47,13 @@ def plothist(column):
 #Function for plotting all scatter plots
 def plotscatter(measure1, measure2):
     #Plotting Scatter Plots: https://kanoki.org/2020/08/30/matplotlib-scatter-plot-color-by-category-in-python/
-    fig, ax = plt.subplots()
+    fig, axes = plt.subplots()
     for key, group in grouped:
-        group.plot(ax=ax,kind='scatter', x = measure1, y = measure2, grid = True, label=key, color = colors[key])
+        group.plot(ax=axes,kind='scatter', x = measure1, y = measure2, grid = True, label=key, color = colors[key])
     plt.savefig('ScatterPlots/'+ measure1 + "-" + measure2 + ' Scatter.png')
     plt.show()
 
-
+#Each function call passes in column names for each graph
 plothist('Sepal Length')
 plothist('Sepal Width')
 plothist('Petal Length')

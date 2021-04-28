@@ -1,3 +1,5 @@
+Statistical Analysis of Fishers Iris Data Set 
+=============================================== 
                 Sepal Length                                              \
                        count   mean       std  min    25%  50%  75%  max   
 Name                                                                       
