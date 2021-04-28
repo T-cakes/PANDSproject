@@ -12,6 +12,10 @@
 
 3. [Analysis of Fishers Iris Data Set Using Python](#analysis-of-fishers-iris-data-set-using-python)
 
+    i. [Table Overview](##table-overview)
+
+    ii. [Mean](##mean)
+
 4. [Histogram Analysis](#histogram-analysis)
 
 5. [References](#references)
@@ -63,12 +67,15 @@ And the range of the data in 25% intervals.
 
 ![alt text](https://github.com/T-cakes/PANDSproject/blob/main/output.png)
 
+## Mean
+
 The <i>mean</i> of each data set can tell us the comparisons between each class.
 
 For example, when looking of the <i>mean sepal length</i> for each class we can determine on average that <b>Iris-Virginica's</b> have the longest sepals with an average of 6.588cm.
 
 The <b>Iris-Setosa's</b> have the shortest sepals of all the iris's.
 
+## Standard Deviation
 
 The <i>standard deviation(std)/i> shows us how widely the data varies. 
 
@@ -78,6 +85,7 @@ For example, when we look at the <i>std</i> for <i>petal length's</i> we see tha
 
 Compare this with the <i>std</i> of <b>Iris-Virginica's</b> <i>petal length</i> which is 0.551895. This shows that the data has a wider margin of lengths and may have more outliers on either the higher end or lower end.
 
+## Range
 
 The <i>range</i> is denoted by min, 25%, 50%, 75% and max. These values give more information on the <i>Standard Deviation</i> by showing the exact number and how much they differ from the above and a below intervals.
 
