@@ -3,7 +3,6 @@
  by
 
 # Stephen Caulfield
----------------------------------------------------------
 # Table of Contents
 
 1. [History of Fishers Iris Data Set](#history-of-fishers-iris-data-set)
@@ -11,22 +10,21 @@
 2. [Detailing the Data Set](#detailing-the-data-set)
 
 3. [Analysis of Fishers Iris Data Set Using Python](#analysis-of-fishers-iris-data-set-using-python)\
-    i. [Table Overview](#table-overview)\
-    ii. [Mean](#mean)\
-    iii. [Standard Deviation](#standard-deviation)\
-    iv. [Range](#range)
+    - [Table Overview](#table-overview)\
+    - [Mean](#mean)\
+    - [Standard Deviation](#standard-deviation)\
+    - [Range](#range)
 
 4. [Plots](#plots)\
-    i. [Histogram Analysis](#histogram-analysis)\
-        a. [Histogram Code](#histogram-code)\
-    ii. [Scatter Plots](#scatter-plots)\
-        a. [Scatter Plot Code](#scatter-plot-code)\
-    iii. [Pair Plot](#pair-plot)\
-        a. [Pair Plot Code](#pair-plot-code)
+    - [Histogram Analysis](#histogram-analysis)\
+        - [Histogram Code](#histogram-code)\
+    - [Scatter Plots](#scatter-plots)\
+        - [Scatter Plot Code](#scatter-plot-code)\
+    - [Pair Plot](#pair-plot)\
+        - [Pair Plot Code](#pair-plot-code)
 
 
 5. [References](#references)
----------------------------------------------------------
 
 # History of Fishers Iris Data Set
 
@@ -143,7 +141,6 @@ But also considering that the 50% and 75% intervals are the most closely equival
 
 Comparing this with the <b>Iris-Virginica</b> <i>petal lengths</b> we see the distances for the first 4 intervals range from 0.325 to 0.6 which is somewhat unnotable, but with the 75% to max interval, there is a difference of 1.025 which tells us that there is either some extreme outliers on the higher end or that the <b>Iris-Virginica's</b> <i>petal length's</i> have an exponential growth past a certain point.
 
----------------------------------------------------------
 # Plots
 
 ## Histogram Analysis
