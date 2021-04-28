@@ -12,9 +12,9 @@
 
 3. [Analysis of Fishers Iris Data Set Using Python](#analysis-of-fishers-iris-data-set-using-python)
 
-    i. [Table Overview](##table-overview)
+    i. [Table Overview](#table-overview)
 
-    ii. [Mean](##mean)
+    ii. [Mean](#mean)
 
 4. [Histogram Analysis](#histogram-analysis)
 
