@@ -18,8 +18,12 @@
 
 4. [Plots](#plots)\
     i. [Histogram Analysis](#histogram-analysis)\
+        a. [Histogram Code](#histogram-code)\
     ii. [Scatter Plots](#scatter-plots)\
-    iii. [Pair Plot](#pair-plot)
+        a. [Scatter Plot Code](#scatter-plot-code)\
+    iii. [Pair Plot](#pair-plot)\
+        a. [Pair Plot Code](#pair-plot-code)
+
 
 5. [References](#references)
 ---------------------------------------------------------
@@ -68,6 +72,7 @@ The <i>Standard</i> Deviation of data.
 
 And the range of the data in 25% intervals.
 
+```
         Statistical Analysis of Fishers Iris Data Set 
 
     ===============================================
@@ -99,15 +104,16 @@ And the range of the data in 25% intervals.
     Iris-setosa            50.0  0.244  0.107210  0.1  0.2  0.2  0.3  0.6  
     Iris-versicolor        50.0  1.326  0.197753  1.0  1.2  1.3  1.5  1.8  
     Iris-virginica         50.0  2.026  0.274650  1.4  1.8  2.0  2.3  2.5  
+```
 
 This Table was created using this code:
-
-    f = open('output.txt', 'w')
-    f.write('Statistical Analysis of Fishers Iris Data Set \n')
-    f.write('=============================================== \n')
-    f.write(str(data.groupby(['Name']).describe()))
-    f.close()
-
+```python
+f = open('output.txt', 'w')
+f.write('Statistical Analysis of Fishers Iris Data Set \n')
+f.write('=============================================== \n')
+f.write(str(data.groupby(['Name']).describe()))
+f.close()
+```
 
 ## Mean
 
@@ -115,7 +121,7 @@ The <i>mean</i> of each data set can tell us the comparisons between each class.
 
 For example, when looking of the <i>mean sepal length</i> for each class we can determine on average that <b>Iris-Virginica's</b> have the longest sepals with an average of 6.588cm.
 
-The <b>Iris-Setosa's</b> have the shortest sepals of all the iris's.
+The <b>Iris-Setosa's</b> have the shortest <i>sepal length's</i> of all the Iris's.
 
 ## Standard Deviation
 
@@ -151,7 +157,7 @@ Comparing this with the <b>Iris-Virginica</b> <i>petal lengths</b> we see the di
 
 ![alt text](https://github.com/T-cakes/PANDSproject/blob/main/histogram/Petal%20Width.png)
 
-These histograms were created through this function I wrote:
+### Histogram code
 
 ```python
 #Function for plotting all histograms
@@ -182,7 +188,7 @@ def plothist(column):
 
 ![alt text](https://github.com/T-cakes/PANDSproject/blob/main/ScatterPlots/Sepal%20Width-Petal%20Width%20Scatter.png)
 
-These Scatter Plots were created through this function I wrote:
+### Scatter Plot Code
 
 ```python
 #Function for plotting all scatter plots
@@ -199,7 +205,8 @@ def plotscatter(measure1, measure2):
 
 ![alt text](https://github.com/T-cakes/PANDSproject/blob/main/pairplot.png)
 
-This pairplot was created using seaborn in the piece of code:
+### Pair Plot Code
+
 ```python
 pp = sb.pairplot(data, hue = 'Name', diag_kind="hist")
 pp.savefig("pairplot.png")
