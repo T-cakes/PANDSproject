@@ -39,6 +39,38 @@ In 1936 he wrote an article titled <i>The Use of Multiple Measurements in Taxono
 
 In this article, he developed a linear function to differentiate various Iris species based on their Petal and Sepal lengths and widths. Those Iris species involve: Iris-Setosa, Iris-Versicolor and Iris-Virginica.
 
+        Statistical Analysis of Fishers Iris Data Set 
+
+    ===============================================
+    
+                    Sepal Length                                              \
+                        count   mean       std  min    25%  50%  75%  max   
+    Name                                                                       
+    Iris-setosa             50.0  5.006  0.352490  4.3  4.800  5.0  5.2  5.8   
+    Iris-versicolor         50.0  5.936  0.516171  4.9  5.600  5.9  6.3  7.0   
+    Iris-virginica          50.0  6.588  0.635880  4.9  6.225  6.5  6.9  7.9   
+
+                    Sepal Width                                                \
+                        count   mean       std  min    25%  50%    75%  max   
+    Name                                                                        
+    Iris-setosa            50.0  3.418  0.381024  2.3  3.125  3.4  3.675  4.4   
+    Iris-versicolor        50.0  2.770  0.313798  2.0  2.525  2.8  3.000  3.4   
+    Iris-virginica         50.0  2.974  0.322497  2.2  2.800  3.0  3.175  3.8   
+
+                    Petal Length                                               \
+                        count   mean       std  min  25%   50%    75%  max   
+    Name                                                                        
+    Iris-setosa             50.0  1.464  0.173511  1.0  1.4  1.50  1.575  1.9   
+    Iris-versicolor         50.0  4.260  0.469911  3.0  4.0  4.35  4.600  5.1   
+    Iris-virginica          50.0  5.552  0.551895  4.5  5.1  5.55  5.875  6.9   
+
+                    Petal Width                                            
+                        count   mean       std  min  25%  50%  75%  max  
+    Name                                                                   
+    Iris-setosa            50.0  0.244  0.107210  0.1  0.2  0.2  0.3  0.6  
+    Iris-versicolor        50.0  1.326  0.197753  1.0  1.2  1.3  1.5  1.8  
+    Iris-virginica         50.0  2.026  0.274650  1.4  1.8  2.0  2.3  2.5  
+
 ![alt text](https://camo.githubusercontent.com/74e378bb24b34efb63e8db09c4f073370d36f23aaa2c7580a805e93c881b78c2/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6173736574732e6461746163616d702e636f6d2f626c6f675f6173736574732f4d616368696e652b4c6561726e696e672b522f697269732d6d616368696e656c6561726e696e672e706e67)
 
 # Detailing the Data Set
@@ -118,7 +150,7 @@ Comparing this with the <b>Iris-Virginica</b> <i>petal lengths</b> we see the di
 
 ![alt text](https://github.com/T-cakes/PANDSproject/blob/main/histogram/Petal%20Width.png)
 
-## Scatter Plots
+## Scatter Plots Analysis
 
 ![alt text](https://github.com/T-cakes/PANDSproject/blob/main/ScatterPlots/Petal%20Length-Petal%20Width%20Scatter.png)
 
