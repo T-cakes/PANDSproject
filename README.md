@@ -306,6 +306,7 @@ On the other side, with <i>sepal length</i> and <i>sepal width</i> seem to have 
 
 ![alt text](https://github.com/T-cakes/PANDSproject/blob/main/pairplot.png)
 
+This pair plot's purpose is just to have a compact, easy to read view of each graph in one picture. It was created using seaborn[[5]](#references)
 
 # REFERENCES
 
