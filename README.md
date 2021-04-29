@@ -9,8 +9,8 @@
 
 2. [Code Explanation](#code-explanation)
     - [Imported Libraries](#imported-libraries)
-    - [Reading the .data file](#reading-the-.data-file)
-    - [Writing analysis to txt. file](#writing-analysis-to-txt.-file)
+    - [Reading the data File](#reading-the-data-file)
+    - [Writing Analysis to txt File](#writing-analysis-to-txt-file)
     - [Histogram Code](#histogram-code)
     - [Scatter Plot Code](#scatter-plot-code)
     - [Pair Plot Code](#pair-plot-code)
@@ -55,7 +55,7 @@ import matplotlib.pyplot as plt
 import seaborn as sb
  ```
 
- ## Reading the .data file
+ ## Reading the data File
 
 ```python
 #Removes Limit of lines in Dataframe
@@ -67,7 +67,7 @@ data = pd.read_csv('iris.data', delimiter= None, sep=',',header = None)
 data.columns = dataList
 ```
 
- ## Writing analysis to txt. file
+ ## Writing Analysis to txt File
 
 ```python
 #Writes to output.txt, a summary of each variables split into each flower category.
