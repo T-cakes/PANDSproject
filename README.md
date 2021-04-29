@@ -119,7 +119,7 @@ def plotscatter(measure1, measure2):
     plt.show()
 ```
 
-
+## Pair Plot Code
 
 This plot was created using seaborn, and I mostly wanted to make it to be a more compact set of graphs in one image that allowed overview all possible data set pairings with ease.
 
