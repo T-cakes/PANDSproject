@@ -40,8 +40,9 @@ def plothist(column):
         group[column].plot(ax=axes, kind='hist', alpha = 0.4, title = column, bins = 10, grid=True,  color = colors[key])
     plt.legend(['Iris-setosa', 'iris-versicolor', 'iris-virginica'])
     plt.xlabel( column + ' in cm')
-    plt.ylabel('Amount')
+    plt.ylabel('Frequency')
     plt.savefig('Histogram/'+ column + '.png')
+    fig.canvas.set_window_title(column)
     plt.show()
 
 #Function for plotting all scatter plots
@@ -51,6 +52,7 @@ def plotscatter(measure1, measure2):
     for key, group in grouped:
         group.plot(ax=axes,kind='scatter', x = measure1, y = measure2, grid = True, label=key, color = colors[key])
     plt.savefig('ScatterPlots/'+ measure1 + "-" + measure2 + ' Scatter.png')
+    fig.canvas.set_window_title(measure1 + " + " + measure2)
     plt.show()
 
 #Each function call passes in column names for each graph

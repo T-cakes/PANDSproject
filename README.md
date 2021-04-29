@@ -50,11 +50,11 @@ In this article, he developed a linear function to differentiate various Iris sp
 
 Each of the libraries were required for different parts of the code.
 
-Pandas was required to read the Fisher's data set file and create a dataframe which could be manipulated and analyzed through python[[3]](#references)
+<i><b>Pandas</i></b> was required to read the Fisher's data set file and create a dataframe which could be manipulated and analyzed through python[[3]](#references)
 
-Matplotlib was required for plotting and creating the histograms and scatter plots through python[[4]](#references)
+<i><b>Matplotlib</i></b> was required for plotting and creating the histograms and scatter plots through python[[4]](#references)
 
-Seaborn was used to create the pair plot[[5]](#references)
+<i><b>Seaborn</i></b> was used to create the pair plot[[5]](#references)
 
  ```python
 import pandas as pd
@@ -68,7 +68,7 @@ When Pandas reads in a large table it will summarize/(ecterization?) the data so
 
 The 'col' variable is a list of the column names which is applied to the dataframe after it has been read in.
 
-I assigned the variable 'data' to be the dataframe which will be used for the bulk of data analysis and plotting.
+I assigned the variable 'data' to be the dataframe which will be used for the bulk of data analysis and plotting.[[6]](#references)
 
 ```python
 #Removes Limit of lines in Dataframe
@@ -88,7 +88,7 @@ I open the file and assign it to 'f'.
 
 the first two write functions is just for a header/title to the file. The third write function is writing the analysis of which it describes each measurement(Sepal length, Petal Width etc.) split into each class/flower in these fields: Mean, Standard Deviation and the Range in 25% intervals.
 
-I clarify at the end of the file that all measurements are in centimetres and close the file with f.close().
+I clarify at the end of the file that all measurements are in centimetres and close the file with f.close().[[7]](#references)
 
 ```python
 #Writes to output.txt, a summary of each variables split into each flower category.
@@ -120,9 +120,10 @@ def plothist(column):
     plt.xlabel( column + ' in cm')
     plt.ylabel('Amount')
     plt.savefig('Histogram/'+ column + '.png')
+    fig.canvas.set_window_title(column)
     plt.show()
 ```
-[[6]](#references) - commented reference
+[[8]](#references) - commented reference
 
  ## Scatter Plot Code
 
@@ -138,9 +139,10 @@ def plotscatter(measure1, measure2):
     for key, group in grouped:
         group.plot(ax=axes,kind='scatter', x = measure1, y = measure2, grid = True, label=key, color = colors[key])
     plt.savefig('ScatterPlots/'+ measure1 + "-" + measure2 + ' Scatter.png')
+    fig.canvas.set_window_title(measure1 + " + " + measure2)
     plt.show()
 ```
-[[7]](#references) - commented reference
+[[9]](#references) - commented reference
 
 ## Pair Plot Code
 
@@ -155,9 +157,9 @@ pp.savefig("pairplot.png")
 
 # Detailing the Data Set
 
-The data set that I used comes from the <i>University of California Irvine(UCI) Machine Learning Respository</i>[[8]](#references)
+The data set that I used comes from the <i>University of California Irvine(UCI) Machine Learning Respository</i>[[10]](#references)
 
-The data file itself did not detail the column names so I named them according to the websites[[8]](#references) detail as follows:
+The data file itself did not detail the column names so I named them according to the websites[[10]](#references) detail as follows:
 
     1. Sepal Length
     2. Sepal Width
@@ -165,7 +167,7 @@ The data file itself did not detail the column names so I named them according t
     4. Petal Width
     5. Name
 
-The data set contains 3 classes detailed by name with 50 instances each with those classes being[[8]](#references):
+The data set contains 3 classes detailed by name with 50 instances each with those classes being[[10]](#references):
 
     1. Iris-Setosa
     2. Iris-Versicolor
@@ -272,18 +274,25 @@ Comparing this with the <b>Iris-Virginica</b> <i>petal lengths</b> we see the di
 
 ![alt text](https://github.com/T-cakes/PANDSproject/blob/main/histogram/Petal%20Width.png)
 
+The data from these histograms provide a good presentation of how each measure of the plants group up. 
+
+The <b>Iris-Setosa</b> seems to be the smallest in most categories apart from <i>sepal width</i> of which it is the largest.
+
+The <b>Iris-Versicolor</b> consistantly ranks as the second smallest in each category, although with <i>sepal width</i> it seems to lag slightly as the shortest just behind <b>Iris-Virginica</b>.
+
+The <b>Iris-Virginica</b>
 
 ## Scatter Plots Analysis
 
 ![alt text](https://github.com/T-cakes/PANDSproject/blob/main/ScatterPlots/Petal%20Length-Petal%20Width%20Scatter.png)
+
+![alt text](https://github.com/T-cakes/PANDSproject/blob/main/ScatterPlots/Sepal%20Length-Sepal%20Width%20Scatter.png)
 
 ![alt text](https://github.com/T-cakes/PANDSproject/blob/main/ScatterPlots/Petal%20Length-Sepal%20Width%20Scatter.png)
 
 ![alt text](https://github.com/T-cakes/PANDSproject/blob/main/ScatterPlots/Sepal%20Length-Petal%20Length%20Scatter.png)
 
 ![alt text](https://github.com/T-cakes/PANDSproject/blob/main/ScatterPlots/Sepal%20Length-Petal%20Width%20Scatter.png)
-
-![alt text](https://github.com/T-cakes/PANDSproject/blob/main/ScatterPlots/Sepal%20Length-Sepal%20Width%20Scatter.png)
 
 ![alt text](https://github.com/T-cakes/PANDSproject/blob/main/ScatterPlots/Sepal%20Width-Petal%20Width%20Scatter.png)
 
@@ -305,11 +314,20 @@ Comparing this with the <b>Iris-Virginica</b> <i>petal lengths</b> we see the di
 
 [5] Seaborn - https://seaborn.pydata.org/
 
-[6] Plotting Histograms - https://www.dataindependent.com/pandas/pandas-histogram/
+[6] pandas.read_csv - https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html
 
-[7] Plotting Scatter Plots - https://kanoki.org/2020/08/30/matplotlib-scatter-plot-color-by-category-in-python/
+[7] Reading Writing Text Files Python - https://www.geeksforgeeks.org/reading-writing-text-files-python/
 
-[8] UCI Machine Learning Respository - https://archive.ics.uci.edu/ml/datasets/iris
+[8] Plotting Histograms - https://www.dataindependent.com/pandas/pandas-histogram/
+
+[9] Plotting Scatter Plots - https://kanoki.org/2020/08/30/matplotlib-scatter-plot-color-by-category-in-python/
+
+[10] UCI Machine Learning Respository - https://archive.ics.uci.edu/ml/datasets/iris
+
+ ## Additional References
+ 
+ - Github Readme Cheatsheet - https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+
 
 # Technologies Used
 
