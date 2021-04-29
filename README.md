@@ -274,7 +274,7 @@ Comparing this with the <b>Iris-Virginica</b> <i>petal lengths</b> we see the di
 
 ![alt text](https://github.com/T-cakes/PANDSproject/blob/main/histogram/Petal%20Width.png)
 
-The data from these histograms provide a good presentation of how each measure of the plants group up. 
+The data from these histograms provide a good presentation of how each measurement of the plants group up. 
 
 The <b>Iris-Setosa</b> seems to be the smallest in most categories apart from <i>sepal width</i> of which it is the largest.
 
@@ -296,7 +296,12 @@ The <b>Iris-Virginica</b> consistantly has the longest measurements for each val
 
 ![alt text](https://github.com/T-cakes/PANDSproject/blob/main/ScatterPlots/Sepal%20Width-Petal%20Width%20Scatter.png)
 
-These scatter plots give us a better idea of 
+These scatter plots give us a better idea of how each of the measurements collectively relate to each other.
+
+For example, the <i>petal length</i> and <i>petal width</i> almost have a straight line going from the shortest to the longest, paired with the fact that the measurements are closely packed together with each class can determine that these two lengths have heavy correlation with each.
+
+On the other side, with <i>sepal length</i> and <i>sepal width</i> seem to have not much correlation as the results are widely spread across the plot which might determine that there is not much correlation between the two measurements.
+
 ## Pair Plot
 
 ![alt text](https://github.com/T-cakes/PANDSproject/blob/main/pairplot.png)
