@@ -13,7 +13,7 @@ import seaborn as sb
 
 #Removes Limit of lines in Dataframe
 pd.set_option("display.max_rows", None, "display.max_columns", None)
-col = ["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "Name"]
+col = ["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "Class"]
 
 #reads in iris.data and details it for easier use
 data = pd.read_csv('iris.data', delimiter= None, sep=',',header = None)
@@ -23,12 +23,12 @@ data.columns = col
 f = open('output.txt', 'w')
 f.write('Statistical Analysis of Fishers Iris Data Set \n')
 f.write('=============================================== \n')
-f.write(str(data.groupby(['Name']).describe()))
+f.write(str(data.groupby(['Class']).describe()))
 f.write('\n\nAll measurements are in centimetres(cm)')
 f.close()
 
 #Allows each flower on graphs to be colour coded
-grouped = data.groupby('Name')
+grouped = data.groupby('Class')
 colors = {'Iris-setosa':'red', 'Iris-versicolor':'orange', 'Iris-virginica':'purple'}
 
 #Function for plotting all histograms
@@ -68,5 +68,5 @@ plotscatter('Petal Length','Petal Width')
 plotscatter('Sepal Width','Petal Width')
 
 #Produces a pair plot of Histograms and scatterplot using seaborn
-pp = sb.pairplot(data, hue = 'Name', diag_kind="hist")
+pp = sb.pairplot(data, hue = 'Class', diag_kind="hist")
 pp.savefig("pairplot.png")

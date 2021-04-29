@@ -95,7 +95,7 @@ I clarify at the end of the file that all measurements are in centimetres and cl
 f = open('output.txt', 'w')
 f.write('Statistical Analysis of Fishers Iris Data Set \n')
 f.write('=============================================== \n')
-f.write(str(data.groupby(['Name']).describe()))
+f.write(str(data.groupby(['Class']).describe()))
 f.write('\n\nAll measurements are in centimetres(cm)')
 f.close()
 ```
@@ -151,7 +151,7 @@ This plot was created using seaborn, and I mostly wanted to make it to be a more
 The one issue with these pair plots is that they have repeating graph's that are just inverted in some fashion.
 
 ```python
-pp = sb.pairplot(data, hue = 'Name', diag_kind="hist")
+pp = sb.pairplot(data, hue = 'Class', diag_kind="hist")
 pp.savefig("pairplot.png")
 ```
 
@@ -165,7 +165,7 @@ The data file itself did not detail the column names so I named them according t
     2. Sepal Width
     3. Petal Length
     4. Petal Width
-    5. Name
+    5. Class
 
 The data set contains 3 classes detailed by name with 50 instances each with those classes being[[10]](#references):
 
@@ -228,7 +228,7 @@ This Table was created using this code:
 f = open('output.txt', 'w')
 f.write('Statistical Analysis of Fishers Iris Data Set \n')
 f.write('=============================================== \n')
-f.write(str(data.groupby(['Name']).describe()))
+f.write(str(data.groupby(['Class']).describe()))
 f.close()
 ```
 
