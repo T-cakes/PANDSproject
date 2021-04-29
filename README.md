@@ -7,25 +7,29 @@
 
 1. [History of Fishers Iris Data Set](#history-of-fishers-iris-data-set)
 
-2. [Detailing the Data Set](#detailing-the-data-set)
+2. [Code Explanation](#code-explanation)
+    - [Imported Libraries](#imported-libraries)
+    - [Reading the .data file](#reading-the-.data-file)
+    - [Writing analysis to txt. file](#writing-analysis-to-txt.-file)
+    - [Histogram Code](#histogram-code)
+    - [Scatter Plot Code](#scatter-plot-code)
+    - [Pair Plot Code](#pair-plot-code)
+3. [Detailing the Data Set](#detailing-the-data-set)
 
-3. [Analysis of Fishers Iris Data Set Using Python](#analysis-of-fishers-iris-data-set-using-python)
+4. [Analysis of Fishers Iris Data Set Using Python](#analysis-of-fishers-iris-data-set-using-python)
     - [Table Overview](#table-overview)
     - [Mean](#mean)
     - [Standard Deviation](#standard-deviation)
     - [Range](#range)
 
-4. [Plots](#plots)
+5. [Plots](#plots)
     - [Histogram Analysis](#histogram-analysis)
-        - [Histogram Code](#histogram-code)
     - [Scatter Plots](#scatter-plots)
-        - [Scatter Plot Code](#scatter-plot-code)
     - [Pair Plot](#pair-plot)
-        - [Pair Plot Code](#pair-plot-code)
 
-5. [Technologies Used](#technologies-used)
+6. [Technologies Used](#technologies-used)
 
-5. [References](#references)
+7. [References](#references)
 
 
 # History of Fishers Iris Data Set
@@ -38,6 +42,93 @@ In this article, he developed a linear function to differentiate various Iris sp
 
 ![alt text](https://camo.githubusercontent.com/74e378bb24b34efb63e8db09c4f073370d36f23aaa2c7580a805e93c881b78c2/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6173736574732e6461746163616d702e636f6d2f626c6f675f6173736574732f4d616368696e652b4c6561726e696e672b522f697269732d6d616368696e656c6561726e696e672e706e67)
 
+
+
+# Code Explanation
+
+ ## Imported Libraries
+
+ ```python
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sb
+ ```
+
+ ## Reading the .data file
+
+```python
+#Removes Limit of lines in Dataframe
+pd.set_option("display.max_rows", None, "display.max_columns", None)
+dataList = ["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "Name"]
+
+#reads in iris.data and details it for easier use
+data = pd.read_csv('iris.data', delimiter= None, sep=',',header = None)
+data.columns = dataList
+```
+
+ ## Writing analysis to txt. file
+
+```python
+#Writes to output.txt, a summary of each variables split into each flower category.
+f = open('output.txt', 'w')
+f.write('Statistical Analysis of Fishers Iris Data Set \n')
+f.write('=============================================== \n')
+f.write(str(data.groupby(['Name']).describe()))
+f.write('\n\nAll measurements are in centimetres(cm)')
+f.close()
+```
+
+ ## Histogram Code
+
+The function I wrote that creates the histogram passes in a string that one of the measurement columns. This then applies that string to all areas that specific data is required of referenced.\
+
+I used matplotlib to create and detail the histograms and it proved to have all the tools need for a satisfactory histogram\
+
+I originally had several different blocks of code to create each histogram, but I realised this was a lot of repetition and that it could be condensed into a singular function with a string argument passed in.
+
+```python
+#Function for plotting all histograms
+def plothist(column):
+    #allows Plotting of each Flower type seperately in same graph
+    fig, axes = plt.subplots()
+    for key, group in grouped:
+        #Plotting Histograms: https://www.dataindependent.com/pandas/pandas-histogram/
+        group[column].plot(ax=axes, kind='hist', alpha = 0.4, title = column, bins = 10, grid=True,  color = colors[key])
+    plt.legend(['Iris-setosa', 'iris-versicolor', 'iris-virginica'])
+    plt.xlabel( column + ' in cm')
+    plt.ylabel('Amount')
+    plt.savefig('Histogram/'+ column + '.png')
+    plt.show()
+```
+
+ ## Scatter Plot Code
+
+The function I wrote for creating scatter plots is similar in nature to my histogram plotting function, with the only difference being I passed in two strings for a pair of data sets to create the scatter plot.
+
+6 scatter plots are created through this, 1 for each pairing of data sets.
+
+```python
+#Function for plotting all scatter plots
+def plotscatter(measure1, measure2):
+    #Plotting Scatter Plots: https://kanoki.org/2020/08/30/matplotlib-scatter-plot-color-by-category-in-python/
+    fig, axes = plt.subplots()
+    for key, group in grouped:
+        group.plot(ax=axes,kind='scatter', x = measure1, y = measure2, grid = True, label=key, color = colors[key])
+    plt.savefig('ScatterPlots/'+ measure1 + "-" + measure2 + ' Scatter.png')
+    plt.show()
+```
+
+
+
+This plot was created using seaborn, and I mostly wanted to make it to be a more compact set of graphs in one image that allowed overview all possible data set pairings with ease.
+
+The one issue with these pair plots is that they have repeating graph's that are just inverted in some fashion.
+
+```python
+pp = sb.pairplot(data, hue = 'Name', diag_kind="hist")
+pp.savefig("pairplot.png")
+```
 
 # Detailing the Data Set
 
@@ -126,7 +217,7 @@ The <b>Iris-Setosa's</b> have the shortest <i>sepal length's</i> of all the Iris
 
 ## Standard Deviation
 
-The <i>standard deviation(std)/i> shows us how widely the data varies. 
+The <i>standard deviation(std)</i> shows us how widely the data varies. 
 
 This information is useful as it gives us a better idea of the consistency of the data.
 
@@ -158,28 +249,6 @@ Comparing this with the <b>Iris-Virginica</b> <i>petal lengths</b> we see the di
 
 ![alt text](https://github.com/T-cakes/PANDSproject/blob/main/histogram/Petal%20Width.png)
 
-### Histogram code
-
-The function I wrote that creates the histogram passes in a string that one of the measurement columns. This then applies that string to all areas that specific data is required of referenced.\
-
-I used matplotlib to create and detail the histograms and it proved to have all the tools need for a satisfactory histogram\
-
-I originally had several different blocks of code to create each histogram, but I realised this was a lot of repetition and that it could be condensed into a singular function with a string argument passed in.
-
-```python
-#Function for plotting all histograms
-def plothist(column):
-    #allows Plotting of each Flower type seperately in same graph
-    fig, axes = plt.subplots()
-    for key, group in grouped:
-        #Plotting Histograms: https://www.dataindependent.com/pandas/pandas-histogram/
-        group[column].plot(ax=axes, kind='hist', alpha = 0.4, title = column, bins = 10, grid=True,  color = colors[key])
-    plt.legend(['Iris-setosa', 'iris-versicolor', 'iris-virginica'])
-    plt.xlabel( column + ' in cm')
-    plt.ylabel('Amount')
-    plt.savefig('Histogram/'+ column + '.png')
-    plt.show()
-```
 
 ## Scatter Plots Analysis
 
@@ -195,37 +264,12 @@ def plothist(column):
 
 ![alt text](https://github.com/T-cakes/PANDSproject/blob/main/ScatterPlots/Sepal%20Width-Petal%20Width%20Scatter.png)
 
-### Scatter Plot Code
-
-The function I wrote for creating scatter plots is similar in nature to my histogram plotting function, with the only difference being I passed in two strings for a pair of data sets to create the scatter plot.
-
-6 scatter plots are created through this, 1 for each pairing of data sets.
-
-```python
-#Function for plotting all scatter plots
-def plotscatter(measure1, measure2):
-    #Plotting Scatter Plots: https://kanoki.org/2020/08/30/matplotlib-scatter-plot-color-by-category-in-python/
-    fig, axes = plt.subplots()
-    for key, group in grouped:
-        group.plot(ax=axes,kind='scatter', x = measure1, y = measure2, grid = True, label=key, color = colors[key])
-    plt.savefig('ScatterPlots/'+ measure1 + "-" + measure2 + ' Scatter.png')
-    plt.show()
-```
 
 ## Pair Plot
 
 ![alt text](https://github.com/T-cakes/PANDSproject/blob/main/pairplot.png)
 
-### Pair Plot Code
 
-This plot was created using seaborn, and I mostly wanted to make it to be a more compact set of graphs in one image that allowed overview all possible data set pairings with ease.
-
-The one issue with these pair plots is that they have repeating graph's that are just inverted in some fashion.
-
-```python
-pp = sb.pairplot(data, hue = 'Name', diag_kind="hist")
-pp.savefig("pairplot.png")
-```
 # REFERENCES
 
 [1] The Iris Dataset — A Little Bit of History and Biology - https://towardsdatascience.com/the-iris-dataset-a-little-bit-of-history-and-biology-fb4812f5a7b5
