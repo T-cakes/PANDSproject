@@ -48,26 +48,47 @@ In this article, he developed a linear function to differentiate various Iris sp
 
  ## Imported Libraries
 
+Each of the libraries were required for different parts of the code.
+
+Pandas was required to read the Fisher's data set file and create a dataframe which could be manipulated and analyzed through python[[3]](#references)
+
+Matplotlib was required for plotting and creating the histograms and scatter plots through python[[4]](#references)
+
+Seaborn was used to create the pair plot[[5]](#references)
+
  ```python
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sb
  ```
 
  ## Reading the data File
 
+When Pandas reads in a large table it will summarize/(ecterization?) the data so that it only shows the first and last rows in the table. This is the reason for the first line which sets pandas to read all lines in files in the future.
+
+The 'col' variable is a list of the column names which is applied to the dataframe after it has been read in.
+
+I assigned the variable 'data' to be the dataframe which will be used for the bulk of data analysis and plotting.
+
 ```python
 #Removes Limit of lines in Dataframe
 pd.set_option("display.max_rows", None, "display.max_columns", None)
-dataList = ["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "Name"]
+col = ["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "Name"]
 
 #reads in iris.data and details it for easier use
 data = pd.read_csv('iris.data', delimiter= None, sep=',',header = None)
-data.columns = dataList
+data.columns = col
 ```
 
  ## Writing Analysis to txt File
+
+This piece of code is mostly presentation for the output text file.
+
+I open the file and assign it to 'f'.
+
+the first two write functions is just for a header/title to the file. The third write function is writing the analysis of which it describes each measurement(Sepal length, Petal Width etc.) split into each class/flower in these fields: Mean, Standard Deviation and the Range in 25% intervals.
+
+I clarify at the end of the file that all measurements are in centimetres and close the file with f.close().
 
 ```python
 #Writes to output.txt, a summary of each variables split into each flower category.
@@ -101,6 +122,7 @@ def plothist(column):
     plt.savefig('Histogram/'+ column + '.png')
     plt.show()
 ```
+[[6]](#references) - commented reference
 
  ## Scatter Plot Code
 
@@ -118,6 +140,7 @@ def plotscatter(measure1, measure2):
     plt.savefig('ScatterPlots/'+ measure1 + "-" + measure2 + ' Scatter.png')
     plt.show()
 ```
+[[7]](#references) - commented reference
 
 ## Pair Plot Code
 
@@ -132,9 +155,9 @@ pp.savefig("pairplot.png")
 
 # Detailing the Data Set
 
-The data set that I used comes from the <i>University of California Irvine(UCI) Machine Learning Respository</i>[[3]](#references)
+The data set that I used comes from the <i>University of California Irvine(UCI) Machine Learning Respository</i>[[8]](#references)
 
-The data file itself did not detail the column names so I named them according to the websites[[3]](#references) detail as follows:
+The data file itself did not detail the column names so I named them according to the websites[[8]](#references) detail as follows:
 
     1. Sepal Length
     2. Sepal Width
@@ -142,7 +165,7 @@ The data file itself did not detail the column names so I named them according t
     4. Petal Width
     5. Name
 
-The data set contains 3 classes detailed by name with 50 instances each with those classes being[[3]](#references):
+The data set contains 3 classes detailed by name with 50 instances each with those classes being[[8]](#references):
 
     1. Iris-Setosa
     2. Iris-Versicolor
@@ -276,7 +299,17 @@ Comparing this with the <b>Iris-Virginica</b> <i>petal lengths</b> we see the di
 
 [2] Annals of Human Genetics - https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1936.tb02137.x
 
-[3] UCI Machine Learning Respository - https://archive.ics.uci.edu/ml/datasets/iris
+[3] Pandas for Python - https://pandas.pydata.org/about/index.html
+
+[4] Matplotlib - https://matplotlib.org/
+
+[5] Seaborn - https://seaborn.pydata.org/
+
+[6] Plotting Histograms - https://www.dataindependent.com/pandas/pandas-histogram/
+
+[7] Plotting Scatter Plots - https://kanoki.org/2020/08/30/matplotlib-scatter-plot-color-by-category-in-python/
+
+[8] UCI Machine Learning Respository - https://archive.ics.uci.edu/ml/datasets/iris
 
 # Technologies Used
 
