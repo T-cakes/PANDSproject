@@ -280,7 +280,7 @@ The <b>Iris-Setosa</b> seems to be the smallest in most categories apart from <i
 
 The <b>Iris-Versicolor</b> consistantly ranks as the second smallest in each category, although with <i>sepal width</i> it seems to lag slightly as the shortest just behind <b>Iris-Virginica</b>.
 
-The <b>Iris-Virginica</b>
+The <b>Iris-Virginica</b> consistantly has the longest measurements for each value, even with the <i>sepal width</i> where it is the second longest it does not fall far behind the <b>Iris-Setosa</b> which would denote that the <b> Iris-Virginica</b> is generally the Iris flower of all of them.
 
 ## Scatter Plots Analysis
 
@@ -296,7 +296,7 @@ The <b>Iris-Virginica</b>
 
 ![alt text](https://github.com/T-cakes/PANDSproject/blob/main/ScatterPlots/Sepal%20Width-Petal%20Width%20Scatter.png)
 
-
+These scatter plots give us a better idea of 
 ## Pair Plot
 
 ![alt text](https://github.com/T-cakes/PANDSproject/blob/main/pairplot.png)
